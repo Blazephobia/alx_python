@@ -12,7 +12,7 @@ for char in password:
         has_upper = True
     elif char.islower():
         has_lower = True
-    if char.isdigit():
+    elif char.isdigit():
         has_digit = True
     elif char == ' ':
         return False
