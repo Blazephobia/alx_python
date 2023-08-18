@@ -2,9 +2,9 @@
 def is_prime(number):
     if number <= 1:
         return False
-    elif number< 3:
+    elif number <= 3:
         return True
-    elif number % 2 == 0 or number % 3 == 0:
+    if number % 2 == 0 or number % 3 == 0:
         return False
     i = 5
     while i * i <= number:
