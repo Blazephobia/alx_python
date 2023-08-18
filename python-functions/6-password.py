@@ -16,6 +16,6 @@ for char in password:
         has_digit = True
     elif char == ' ':
         return False
-        
+    
 return has_upper and has_lower and has_digit
     
