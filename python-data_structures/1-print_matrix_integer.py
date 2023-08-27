@@ -1,7 +1,7 @@
 def print_matrix_integer(matrix=[[]]):
     for row in matrix:
-        for num in row:
-            # Use str.format() to format and print each integer
-            print("{:d}".format(num), end=" ")
+        for index, num in enumerate(row):
+            if index > 0:
+                print(" ", end="")
+            print("{:d}".format(num), end="")
         print()
-        
