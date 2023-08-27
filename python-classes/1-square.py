@@ -5,5 +5,5 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size  # Private instance attribute
-        except (TypeError, ValueError) as e:
-        print(e)
+except (TypeError, ValueError) as e:
+    print(e)
