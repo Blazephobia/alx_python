@@ -23,24 +23,5 @@ class Square:
         else:
             for _ in range(self.__size):
                 print("#" * self.__size)
-
-# Example usage:
-try:
-    square1 = Square(5)
-    square1.my_print()  # Output: #####
-                        #         #####
-                        #         #####
-                        #         #####
-                        #         #####
-    
-    square2 = Square(3)
-    square2.my_print()  # Output: ###
-                        #         ###
-                        #         ###
-    
-    square3 = Square(0)
-    square3.my_print()  # Output: (empty line)
-    
-    square4 = Square(-2)  # This will raise a ValueError
 except (TypeError, ValueError) as e:
     print(e)
