@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # models/__init__.py (empty file to make the folder a package)
 
 # models/base.py
