@@ -1,14 +1,12 @@
-#!/usr/bin/python3
-"""This script fetches data from
-    https://alx-intranet.hbtn.io/status
-"""
+import requests
 
+url = 'https://alu-intranet.hbtn.io/status'
 
-import urllib.request
+try:
+    response = requests.get(url)
 
-with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
-    body = response.read()
     print("Body response:")
-    print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
-    print("\t- utf8 content: {}".format(body.decode('utf-8')))
+    print("\t- type:", type(response.text))
+    print("\t- content:", response.text)
+except requests.exceptions.RequestException as e:
+    print("An error occurred:", e)
