@@ -11,15 +11,11 @@ url = sys.argv[1]
 try:
     response = requests.get(url)
 
-    # Check if the request was successful
-    if response.status_code == 200:
-        # Check if the 'X-Request-Id' header is present in the response
-        if 'X-Request-Id' in response.headers:
-            x_request_id = response.headers['X-Request-Id']
-            print(f'X-Request-Id: {x_request_id}')
-        else:
-            print("The 'X-Request-Id' header is not present in the response.")
+    # Check if the 'X-Request-Id' header is present in the response
+    if 'X-Request-Id' in response.headers:
+        x_request_id = response.headers['X-Request-Id']
+        print(x_request_id)
     else:
-        print(f"Request failed with status code: {response.status_code}")
+        print("The 'X-Request-Id' header is not present in the response.")
 except requests.exceptions.RequestException as e:
     print(f"An error occurred: {e}")
